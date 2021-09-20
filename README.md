@@ -12,7 +12,7 @@ ifconfig wireless_adapter_name hw ether 00:19:35:89:88:14
 ifconfig wireless_adapter_name up
 ```
 
-2. Change your wireless interface to "Monitor" mode.By default, the mode of wireless devices is set to "Managed" that means our wireless device will only capture packets that have our device's MAC address as the destination MAC.
+2. Change your wireless interface to "Monitor" mode. By default, the mode of wireless devices is set to "Managed" that means our wireless device will only capture packets that have our device's MAC address as the destination MAC.
 
 ```
 ifconfig wireless_adapter_name down
