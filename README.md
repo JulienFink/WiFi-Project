@@ -52,12 +52,14 @@ aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter
 
    To crack WEP, we need a large number of packets/IVs to analyse the IVs and crack the router's key.
 
-   Step 1: capture a large number of packets
+   Step 1:
+   <br/> Capture a large number of packets
    ```
    airodump-ng --bssid MAC --channel N --write file_name wireless_adapter_name
    ```
    
-   Step 2: run aircrack-ng to crack the password
+   Step 2:
+   <br/> Run aircrack-ng to crack the password
    ```
    aircrack-ng .cap_file_captured_previously
    ```
@@ -67,12 +69,14 @@ aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter
    
    The goal is to capture the handshake (4 packets) between the router and a device.
    
-   Step 1: run a deauthentication attack against a device connected to the router and wait for him to connect back to it OR wait for a new client to connect.
+   Step 1: 
+           <br/> Run a deauthentication attack against a device connected to the router and wait for him to connect back to it OR wait for a new client to connect.
            <br/> Catch the handshake using "airodump-ng".
            <br/> The handshake doesn't contain data that helps recover the key, but it contains data that can be used to check if a key is valid or not !
            <br/> Useful information in the handshake - MIC (Message Integrity Code): SP address, STA address, AP nonce, STA nonce, EAPOL, Payload
    
-   Step 2: create a wordlist/dictionnary: "crunch" command
+   Step 2: 
+           <br/> Create a wordlist/dictionnary: "crunch" command
            <br/> Example: "crunch 6 8 abc123 -o wordlist.txt" --> creates a wordlist of length 6 to 8 with characters abc123 in a file called wordlist.txt
            <br/> Argument "-d 1@" is specified for non-repeating letters.
            <br/> Combining the useful information to the wordlist will create new MICs, which will be compared to the real MIC
@@ -87,9 +91,10 @@ https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-
 ![password_crack](https://user-images.githubusercontent.com/64968597/134026466-bfc08a47-8d84-4f6f-98af-816a25209824.JPG)
 
 
-   Another method: exploit the WPS feature (except if PBC is enabled: Push Button Authentication)
-                   <br/> The WPS feature allows clients to connect without a password.
-                   <br/> Authentication is done using a 8 digit pin, which can be cracked under a minute.
+   Another method: 
+            <br/> Exploit the WPS feature (except if PBC is enabled: Push Button Authentication)
+            <br/> The WPS feature allows clients to connect without a password.
+            <br/> Authentication is done using a 8 digit pin, which can be cracked under a minute.
 
 * ### Post-connection attacks
 
