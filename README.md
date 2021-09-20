@@ -36,6 +36,7 @@ airodump-ng --bssid target_MAC --channel N (--write file_name) wireless_adapter_
 ```
 
 3. Deauthentification attack (disconnect any device from the network):
+
 This attack always work ! The only way around it is to change the MAC address on the target machine.
 ```
 aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter_name
