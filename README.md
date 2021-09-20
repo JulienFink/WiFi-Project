@@ -28,7 +28,7 @@ iwconfig
 ```
 airodump-ng wireless_adapter_name
 ```
-![Discover networks around you](https://user-images.githubusercontent.com/64968597/134020204-342aaa2a-3f5e-4cd9-9609-806ca66fca22.JPG)
+![Discover networks around you](https://user-images.githubusercontent.com/64968597/134020395-c7a67e4b-d7d0-4a84-a155-8a67fdf449c9.JPG)
 
 2. Sniff packet from a specified network:
 ```
