@@ -8,10 +8,10 @@ Pre-connection attacks, gaining access & post-connection attacks on WEP, WPA & W
 2. Change your wireless interface to "Monitor" mode.By default, the mode of wireless devices is set to "Managed" that means our wireless device will only capture packets that have our device's MAC address as the destination MAC.
 
 ```
-ifconfig wlan0 down
+ifconfig wireless_adapter_name down
 airmon-ng check kill (kill all interference processes)
-iwconfig wlan0 mode monitor
-ifconfig wlan0 up
+iwconfig wireless_adapter_name mode monitor
+ifconfig wireless_adapter_name up
 iwconfig
 ```
 
