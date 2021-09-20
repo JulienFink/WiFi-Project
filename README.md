@@ -77,11 +77,13 @@ aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter
            Combining the useful information to the wordlist will create new MICs, which will be compared to the real MIC
            if(new_MIC == MIC), then the word generating this MIC is the router's password !
            
-            ```
-            aircrack-ng file_.cap_containing_handshake -w word_list
-            ```
+   ```
+   aircrack-ng file_.cap_containing_handshake -w word_list
+   ```
             
 https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-95aa-b7999ee1a2b3.mp4
+
+![password_crack](https://user-images.githubusercontent.com/64968597/134026466-bfc08a47-8d84-4f6f-98af-816a25209824.JPG)
 
 
    Another method: exploit the WPS feature (except if PBC is enabled: Push Button Authentication)
