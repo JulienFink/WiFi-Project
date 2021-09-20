@@ -35,7 +35,7 @@ airodump-ng wireless_adapter_name
 airodump-ng --bssid target_MAC --channel N (--write file_name) wireless_adapter_name
 ```
 
-3. Deauthentification attack (disconnect any device from the network):
+3. Deauthentication attack (disconnect any device from the network):
 
 This attack will always work ! The only way around it is to change the MAC address on the target machine.
 ```
