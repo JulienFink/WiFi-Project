@@ -2,7 +2,7 @@
 
 * Pre-connection attacks, gaining access & post-connection attacks on WEP, WPA & WPA2.
 
-## Prerequisites
+### Prerequisites
 0. Linux + wireless adapter.
 1. Change the MAC address of your wireless adapter, either for hiding a computer on a network or for allowing it to impersonate another network device.
 
@@ -22,11 +22,11 @@ ifconfig wireless_adapter_name up
 iwconfig
 ```
 
-## Pre-connection attacks
+### Pre-connection attacks
 
 
 
 
-## Gaining access
+### Gaining access
 
-## Post-connection attacks
+### Post-connection attacks
