@@ -64,6 +64,8 @@ aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter
    aircrack-ng .cap_file_captured_previously
    ```
    Gets cracked instantly !
+   
+2. WPA/WPA2 cracking:
 
 ### Post-connection attacks
 
