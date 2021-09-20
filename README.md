@@ -24,13 +24,13 @@ iwconfig
 ```
 
 * ### Pre-connection attacks
-1. Discover networks around you:
+1. Discover the networks around you:
 ```
 airodump-ng wireless_adapter_name
 ```
 ![Discover networks around you](https://user-images.githubusercontent.com/64968597/134020395-c7a67e4b-d7d0-4a84-a155-8a67fdf449c9.JPG)
 
-2. Sniff packet from a specified network:
+2. Sniff the packets from a specified network:
 ```
 airodump-ng --bssid target_MAC --channel N (--write file_name) wireless_adapter_name
 ```
