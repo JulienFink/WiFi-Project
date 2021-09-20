@@ -98,6 +98,8 @@ https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-
 
 * ### Post-connection attacks
 
+![https_bypass_blur](https://user-images.githubusercontent.com/64968597/134031635-1eb1f336-2dc0-4400-8f64-566ddcf44f2f.png)
+
 1. ARP poisoning with arpspoof:
    <br/> Spoofing the target and telling him we are the router:
    ```
@@ -110,4 +112,3 @@ https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-
 
 2. Bypass https using bettercap:
    <br/> The captured packets are easily analysed using Wireshark to gather passwords, emails, usernames, etc.
-
