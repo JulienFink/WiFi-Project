@@ -1,9 +1,9 @@
-## Projet-WiFi
+# Projet-WiFi
 
 Pre-connection attacks, gaining access & post-connection attacks on WEP, WPA & WPA2.
 
-# Pre-connection attacks
+## Pre-connection attacks
 
-# Gaining access
+## Gaining access
 
-# Post-connection attacks
+## Post-connection attacks
