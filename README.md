@@ -45,10 +45,27 @@ aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter
 
 ✔️ 
 
-
-
-
 ### Gaining access
+
+1. WEP cracking (100% successful):
+   Each packet is encrypted using a unique key stream.
+   A random initialization vector (IV) is used to generate the keys stream.
+   This initialization vector is only 24 bits long.
+   IV is too small and sent in plain text, so in busy networks, IV's will repeat, making it vulnerable to statistical attacks.
+   Therefore, the key stream can be determined and the encryption broken.
+
+   To crack WEP, we need a large number of packets/IVs to analyse the IVs and crack the router's key.
+
+   Step 1: capture a large number of packets
+   ```
+   airodump-ng --bssid MAC --channel N --write file_name wlan0
+   ```
+   
+   Step 2: run aircrack-ng to crack the password
+   ```
+   aircrack-ng .cap_file_captured_previously
+   ```
+   Gets cracked instantly !
 
 ### Post-connection attacks
 
