@@ -4,7 +4,14 @@ Pre-connection attacks, gaining access & post-connection attacks on WEP, WPA & W
 
 ## Prerequisites
 0. Linux + wireless adapter.
-1. Change the MAC address of your machine, either for hiding a computer on a network or for allowing it to impersonate another network device.
+1. Change the MAC address of your wireless adapter, either for hiding a computer on a network or for allowing it to impersonate another network device.
+
+```
+ifconfig wireless_adapter_name down
+ifconfig wireless_adapter_name hw ether 00:19:35:89:88:14
+ifconfig wireless_adapter_name up
+```
+
 2. Change your wireless interface to "Monitor" mode.By default, the mode of wireless devices is set to "Managed" that means our wireless device will only capture packets that have our device's MAC address as the destination MAC.
 
 ```
