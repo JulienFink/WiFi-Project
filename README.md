@@ -1,6 +1,6 @@
 # Projet-WiFi
 
-* Pre-connection attacks, gaining access & post-connection attacks on WEP, WPA & WPA2. ✔️
+* Pre-connection attacks, gaining access & post-connection attacks on WEP, WPA & WPA2. 🛰✔️
 
 ### Prerequisites
 0. Linux + wireless adapter.
