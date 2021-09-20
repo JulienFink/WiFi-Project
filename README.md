@@ -68,15 +68,15 @@ aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter
    The goal is to capture the handshake (4 packets) between the router and a device.
    
    Step 1: run a deauthentication attack against a device connected to the router and wait for him to connect back to it OR wait for a new client to connect.
-           Catch the handshake using "airodump-ng".
-           The handshake doesn't contain data that helps recover the key, but it contains data that can be used to check if a key is valid or not !
-           Useful information in the handshake - MIC (Message Integrity Code): SP address, STA address, AP nonce, STA nonce, EAPOL, Payload
+           <br/> Catch the handshake using "airodump-ng".
+           <br/> The handshake doesn't contain data that helps recover the key, but it contains data that can be used to check if a key is valid or not !
+           <br/> Useful information in the handshake - MIC (Message Integrity Code): SP address, STA address, AP nonce, STA nonce, EAPOL, Payload
    
    Step 2: create a wordlist/dictionnary: "crunch" command
-           Example: "crunch 6 8 abc123 -o wordlist.txt" --> creates a wordlist of length 6 to 8 with characters abc123 in a file called wordlist.txt
-           Argument "-d 1@" is specified for non-repeating letters.
-           Combining the useful information to the wordlist will create new MICs, which will be compared to the real MIC
-           if(new_MIC == MIC), then the word generating this MIC is the router's password !
+           <br/> Example: "crunch 6 8 abc123 -o wordlist.txt" --> creates a wordlist of length 6 to 8 with characters abc123 in a file called wordlist.txt
+           <br/> Argument "-d 1@" is specified for non-repeating letters.
+           <br/> Combining the useful information to the wordlist will create new MICs, which will be compared to the real MIC
+           <br/> if(new_MIC == MIC), then the word generating this MIC is the router's password !
            
    ```
    aircrack-ng file_.cap_containing_handshake -w word_list
@@ -88,8 +88,8 @@ https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-
 
 
    Another method: exploit the WPS feature (except if PBC is enabled: Push Button Authentication)
-                   The WPS feature allows clients to connect without a password.
-                   Authentication is done using a 8 digit pin, which can be cracked under a minute.
+                   <br/> The WPS feature allows clients to connect without a password.
+                   <br/> Authentication is done using a 8 digit pin, which can be cracked under a minute.
 
 ### Post-connection attacks
 
