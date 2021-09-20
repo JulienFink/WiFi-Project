@@ -109,5 +109,5 @@ https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-
    ```
 
 2. Bypass https using bettercap:
-   <br/> The captured packets are easily analysed with Wireshark to gather passwords, emails, usernames, etc.
+   <br/> The captured packets are easily analysed using Wireshark to gather passwords, emails, usernames, etc.
 
