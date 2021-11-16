@@ -1,5 +1,7 @@
 # Arpspoof
 
+![Demonstration of the script](https://user-images.githubusercontent.com/64968597/142011794-6b83546b-a5ee-414f-8385-699e8221d9f7.png)
+
 * ### Prerequisites
 0. Check the 'requirements.txt' file
 
