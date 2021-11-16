@@ -6,7 +6,7 @@
 * ### Usage
 This script provides an arpspoof detection by analysing a *.pcapng, *.pcap, *.cap, *.snoop file.
 <br>
-<br> If the same IP address refers to two different MAC addresses within a capture file, this ERrOr is detected and printed to the user.
+<br> If the same IP address refers to two different MAC addresses within a capture file, this ErROr is detected and printed to the user.
 
 1. Run the following command :  
 ```
