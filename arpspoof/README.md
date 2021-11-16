@@ -14,4 +14,4 @@ This script provides an arpspoof detection by analysing a *.pcapng, *.pcap, *.ca
 ```
 python arpspoof_detection.py --file arpspoof_capture.pcapng
 ```
-Just replace the --file parameter by your own file ^^.
+Just replace the --file parameter with your own file ^^.
