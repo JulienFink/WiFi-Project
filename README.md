@@ -91,7 +91,7 @@ https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-
 ![password_crack](https://user-images.githubusercontent.com/64968597/134026466-bfc08a47-8d84-4f6f-98af-816a25209824.JPG)
 
 
-   Another method: 
+   Another method:
             <br/> Exploit the WPS feature (except if PBC is enabled: Push Button Authentication)
             <br/> The WPS feature allows clients to connect without a password.
             <br/> Authentication is done using a 8 digit pin, which can be cracked under a minute.
