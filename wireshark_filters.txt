@@ -1,4 +1,4 @@
 wlan.fc.type_subtype == 12 #deauthentication
 wlan.fc.type_subtype == 29 #acknowledgement
-wlan.addr == 02:18:f8:72:a4:ad #filter for a specific client by MAC address
+wlan.addr == 04:19:b8:72:a4:ad #filter for a specific client by MAC address
 
