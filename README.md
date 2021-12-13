@@ -2,7 +2,7 @@
 
 Pre-connection attacks, gaining access & post-connection attacks on WEP, WPA & WPA2. 🛰✔️
 
-* ### Prerequisites
+* ## Prerequisites
 0. Linux + wireless adapter.
 
 1. Change the MAC address of your wireless adapter, either for hiding a computer on a network or for allowing it to impersonate another network device.
@@ -23,7 +23,7 @@ ifconfig wireless_adapter_name up
 iwconfig
 ```
 
-* ### Pre-connection attacks
+* ## Pre-connection attacks
 1. Discover the networks around you:
 ```
 airodump-ng wireless_adapter_name
@@ -42,7 +42,7 @@ aireplay-ng --deauth time_out -a router_addr -c target_mac_addr wireless_adapter
 ```
 This attack will always work ! The only way around it is to change the MAC address of the target machine.
 
-* ### Gaining access
+* ## Gaining access
 
 1. WEP cracking (100% successful):
    
@@ -96,7 +96,7 @@ https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-
             <br/> The WPS feature allows clients to connect without a password.
             <br/> Authentication is done using a 8 digit pin, which can be cracked under a minute.
 
-* ### Post-connection attacks
+* ## Post-connection attacks
 
 ![https_bypass_blur](https://user-images.githubusercontent.com/64968597/134031635-1eb1f336-2dc0-4400-8f64-566ddcf44f2f.png)
 
