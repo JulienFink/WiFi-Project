@@ -8,4 +8,4 @@
 
 * ### 20211213 Wi-Fi understanding & issues.pdf : Wi-Fi course
 
-* ### ARP_mechanism.pdf : explanation of the ARP protocol works
+* ### ARP_mechanism.pdf : explanation of how the ARP protocol works
