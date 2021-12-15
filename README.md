@@ -80,8 +80,8 @@ This attack will always work ! The only way around it is to change the MAC addre
            <br/> Useful information in the handshake - Message Integrity Code (MIC): SP address, STA address, AP nonce, STA nonce, EAPOL, Payload
            
    Step 3: 
-           <br/> Start guessing the router's passphrase by computing the PTK.
-           <br/> The passphrase generates the PSK --> the PSK generates the PMK --> the PMK generates the PTK.
+           <br/> Start guessing the router's passphrase by computing the PTK and the resulting MIC (from KCK key).
+           <br/> The passphrase generates the PSK --> the PSK generates the PMK --> the PMK generates the PTK --> the PTK generates the MIC with the KCK key.
            <br/>
            <br/> Create a wordlist/dictionnary:
            <br/> Example: "crunch 6 8 abc123 -o wordlist.txt" --> creates a wordlist of length 6 to 8 with characters abc123 in a file called wordlist.txt
