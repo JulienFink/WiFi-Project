@@ -72,15 +72,16 @@ This attack will always work ! The only way around it is to change the MAC addre
    Step 1: 
            <br/> Run a deauthentication attack against a device connected to the router and wait for him to connect back to it OR wait for a new client to connect.
            <br/> Catch the handshake using "airodump-ng".
-           <br/> The handshake doesn't contain data that helps recover the key, but it contains data that can be used to check if a key is valid or not !
+           <br/> In a straight forward way, the handshake doesn't contain data that helps recover the key.
+           <br/> However, it contains data that can be used to compute if a key is valid or not !
            <br/> Useful information in the handshake - MIC (Message Integrity Code): SP address, STA address, AP nonce, STA nonce, EAPOL, Payload
    
    Step 2: 
            <br/> Create a wordlist/dictionnary: "crunch" command
            <br/> Example: "crunch 6 8 abc123 -o wordlist.txt" --> creates a wordlist of length 6 to 8 with characters abc123 in a file called wordlist.txt
            <br/> Argument "-d 1@" is specified for non-repeating letters.
-           <br/> Combining the useful information to the wordlist will create new MICs, which will be compared to the real MIC
-           <br/> if(new_MIC == MIC), then the word generating this MIC is the router's password !
+           <br/> Combining the useful information to the wordlist will create new MICs, which will be compared to the (2nd message) MIC of the 4-way handshake.
+           <br/> if(new_MIC == MIC), then the passphrase generating this MIC is the router's password !
            
    ```
    aircrack-ng file_.cap_containing_handshake -w word_list
