@@ -44,7 +44,7 @@ This attack will always work ! The only way around it is to change the MAC addre
 
 * ## Gaining access
 
-1. WEP cracking (100% successful):
+1. WEP cracking : (~100% success)
    
    Each packet is encrypted using a unique key stream.
    <br/> A random initialization vector (IV) is used to generate the keys stream. This initialization vector is only 24 bits long.
@@ -65,7 +65,7 @@ This attack will always work ! The only way around it is to change the MAC addre
    ```
    Gets cracked instantly !
    
-2. WPA/WPA2 cracking:
+2. WPA/WPA2 cracking : (~40% success)
    
    The goal is to capture the handshake (4 packets) between the router and a device.
    
