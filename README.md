@@ -71,22 +71,29 @@ This attack will always work ! The only way around it is to change the MAC addre
    
    Step 1: 
            <br/> Run a deauthentication attack against a device connected to the router and wait for him to connect back to it OR wait for a new client to connect.
-           <br/> Catch the handshake using "airodump-ng".
+           
+   Step 2:
+           <br/> Catch the 4-way handshake (EAPOL) using "airodump-ng" of a client (re)connecting.
+           <br/>
            <br/> In a straight forward way, the handshake doesn't contain data that helps recover the key.
            <br/> However, it contains data that can be used to compute if a key is valid or not !
-           <br/> Useful information in the handshake - MIC (Message Integrity Code): SP address, STA address, AP nonce, STA nonce, EAPOL, Payload
-   
-   Step 2: 
+           <br/> Useful information in the handshake - Message Integrity Code (MIC): SP address, STA address, AP nonce, STA nonce, EAPOL, Payload
+           
+   Step 3: 
+           <br/> Start guessing the router's passphrase by computing the PTK.
+           <br/> The passphrase generates the PSK --> the PSK generates the PMK --> the PMK generates the PTK.
+           <br/>
            <br/> Create a wordlist/dictionnary:
            <br/> Example: "crunch 6 8 abc123 -o wordlist.txt" --> creates a wordlist of length 6 to 8 with characters abc123 in a file called wordlist.txt
            <br/> Argument "-d 1@" is specified for non-repeating letters.
-           <br/>
-           <br/> Combining the useful information to the wordlist will create new MICs, which will be compared to the (2nd message) MIC of the 4-way handshake.
-           <br/> if(new_MIC == MIC), then the passphrase generating this MIC is the router's password !
            
    ```
    aircrack-ng file_containing_handshake.cap -w word_list
    ```
+   Step 4 : 
+           <br/> The aircrack-ng command will generate new MICs from the wordlist and compare each of them to the (2nd message) MIC of the 4-way handshake.
+           <br/> if(new_MIC == MIC_handshake), then the passphrase generating this MIC is the router's password !
+           
             
 https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-95aa-b7999ee1a2b3.mp4
 
