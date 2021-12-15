@@ -77,14 +77,15 @@ This attack will always work ! The only way around it is to change the MAC addre
            <br/> Useful information in the handshake - MIC (Message Integrity Code): SP address, STA address, AP nonce, STA nonce, EAPOL, Payload
    
    Step 2: 
-           <br/> Create a wordlist/dictionnary: "crunch" command
+           <br/> Create a wordlist/dictionnary:
            <br/> Example: "crunch 6 8 abc123 -o wordlist.txt" --> creates a wordlist of length 6 to 8 with characters abc123 in a file called wordlist.txt
            <br/> Argument "-d 1@" is specified for non-repeating letters.
+           <br/>
            <br/> Combining the useful information to the wordlist will create new MICs, which will be compared to the (2nd message) MIC of the 4-way handshake.
            <br/> if(new_MIC == MIC), then the passphrase generating this MIC is the router's password !
            
    ```
-   aircrack-ng file_.cap_containing_handshake -w word_list
+   aircrack-ng file_containing_handshake.cap -w word_list
    ```
             
 https://user-images.githubusercontent.com/64968597/134026257-af761b17-4b0b-4c87-95aa-b7999ee1a2b3.mp4
