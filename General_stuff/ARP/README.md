@@ -4,5 +4,5 @@
 
 2. ARP request are sent in clear text
 
-3. ARP reply : sender's MAC and IP addresses are never checked on previous connections to detect ARP spoofing / MiTM attacks
+3. Sender's MAC and IP addresses for ARP replies are never checked on previous connections to detect ARP spoofing / MiTM attacks
 
