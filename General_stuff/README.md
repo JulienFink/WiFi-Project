@@ -6,6 +6,6 @@
 
 * ### WAP folder : capture showing of how the WAP protocol works
 
-* ### 20211213 Wi-Fi understanding & issues.pdf : Wi-Fi course
+* ### 20211213 WiFi overview.pdf : WiFi course
 
 * ### ARP_mechanism.pdf : explanation of how the ARP protocol works
