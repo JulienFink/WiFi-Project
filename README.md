@@ -1,4 +1,4 @@
-# WiFi-Project
+# WiFi-Project <a href="https://github.com/julienfink/wifi-project/stargazers"><img alt="Repo stars" src="https://img.shields.io/github/stars/julienfink/wifi-project?style=social"></a> <a href="https://github.com/julienfink/wifi-project/fork"><img alt="Repo forks" src="https://img.shields.io/github/forks/julienfink/wifi-project?style=social"></a>
 
 Pre-connection attacks, gaining access & post-connection attacks on WEP, WPA & WPA2. 🛰✔️
 
